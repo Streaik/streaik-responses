@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net11.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="../../Models/**/*.cs" Link="Models/%(RecursiveDir)%(Filename)%(Extension)" />
+    <Compile Include="../../Extensions/ResponseOutputConversions.cs" Link="Extensions/ResponseOutputConversions.cs" />
+    <Compile Include="../../Extensions/ResponseOutputExtensions.cs" Link="Extensions/ResponseOutputExtensions.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="../../src/Streaik.Responses/Streaik.Responses.csproj" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net11.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="ApplyPatchCompatibilityTests.cs" />
+    <Compile Include="NativeMetadataCompatibilityTests.cs" />
+    <Compile Include="../../Models/**/*.cs" Link="Models/%(RecursiveDir)%(Filename)%(Extension)" />
+    <Compile Include="../../Extensions/**/*.cs" Link="Extensions/%(RecursiveDir)%(Filename)%(Extension)" />
+    <Compile Include="../../Diagnostics/**/*.cs" Link="Diagnostics/%(RecursiveDir)%(Filename)%(Extension)" />
+    <Compile Include="../../ProviderCredentialHeaders.cs" Link="ProviderCredentialHeaders.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="../../src/Streaik.Responses/Streaik.Responses.csproj" />
+  </ItemGroup>
+</Project>
