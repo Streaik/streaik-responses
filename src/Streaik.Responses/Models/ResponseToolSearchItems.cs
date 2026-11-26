@@ -19,6 +19,7 @@ public sealed class ResponseToolSearchCallItem : ResponseInputItem
     public string Execution { get; set; } = "server";
 
     [JsonPropertyName("call_id")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.Never)]
     public string? CallId { get; set; }
 
     [JsonPropertyName("status")]
@@ -45,6 +46,7 @@ public sealed class ResponseToolSearchOutputItem : ResponseInputItem
     public string Execution { get; set; } = "server";
 
     [JsonPropertyName("call_id")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.Never)]
     public string? CallId { get; set; }
 
     [JsonPropertyName("status")]
